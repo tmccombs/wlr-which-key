@@ -21,6 +21,8 @@ Keybindings may be single characters (e.g. `a`, `B`) or [xkb key labels](https:/
 When executed a command will normally end the `wlr_which_key` process. If you want certain commands to keep the UI open after they execute then
 configure those specific commands with (`keep_open: true`).
 
+The `cmd` argument is passed to the shell, which means you can use `&&`, or `;` to run multiple commands, use redirection, reference environment variables, etc. This also means that you need to properly quote the contents of the command.
+
 Example config:
 
 ```yaml
